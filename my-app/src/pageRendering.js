@@ -11,15 +11,17 @@ export const renderingHTML = (callback) => {
 			{ className: 'App-header' },
 			createElement('img', { src: LOGO_IMAGE, className: 'App-logo', alt: 'logo' }),
 			createElement('p'),
-			createElement('code'),
-			callback,
-			createElement('a', {
-				className: 'App-link',
-				href: 'https://reactjs.org',
-				target: '_blank',
-				rel: 'noopener noreferrer',
-			}),
-			'Learn React',
+			createElement('code', {}, callback),
+			createElement(
+				'a',
+				{
+					className: 'App-link',
+					href: 'https://reactjs.org',
+					target: '_blank',
+					rel: 'noopener noreferrer',
+				},
+				'Learn React',
+			),
 		),
 	);
 };
